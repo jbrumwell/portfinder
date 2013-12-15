@@ -10,7 +10,7 @@ module.exports = function(callback) {
     address.connection  = 'tcp://'+address.address+':'+address.port;
         
     server.close(function() {
-        callback && callback(address);
+        callback && callback(null, address);
     });
     
     return address;
